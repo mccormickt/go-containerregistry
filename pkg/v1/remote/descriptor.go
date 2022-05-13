@@ -78,6 +78,8 @@ func Get(ref name.Reference, options ...Option) (*Descriptor, error) {
 		// Just to look at them.
 		types.DockerManifestSchema1,
 		types.DockerManifestSchema1Signed,
+		types.DockerManifestSchema2,
+		types.OCIManifestSchema1,
 	}
 	acceptable = append(acceptable, acceptableImageMediaTypes...)
 	acceptable = append(acceptable, acceptableIndexMediaTypes...)
@@ -94,6 +96,8 @@ func Head(ref name.Reference, options ...Option) (*v1.Descriptor, error) {
 		// Just to look at them.
 		types.DockerManifestSchema1,
 		types.DockerManifestSchema1Signed,
+		types.DockerManifestSchema2,
+		types.OCIManifestSchema1,
 	}
 	acceptable = append(acceptable, acceptableImageMediaTypes...)
 	acceptable = append(acceptable, acceptableIndexMediaTypes...)
